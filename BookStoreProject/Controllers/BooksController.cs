@@ -1,7 +1,7 @@
-﻿using BookStoreProject.Interfaces;
+﻿using BookStoreProject.DTOs;
 using BookStoreProject.Models;
+using BookStoreProject.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace BookStoreProject.Controllers
 {
@@ -12,54 +12,110 @@ namespace BookStoreProject.Controllers
         private readonly IBookService _bookService;
         private readonly ILogger<BooksController> _logger;
 
+        // Inject ILogger in the constructor
         public BooksController(IBookService bookService, ILogger<BooksController> logger)
         {
             _bookService = bookService;
             _logger = logger;
         }
 
+        // GET: api/books
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetBooks()
+        public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooks()
         {
-            _logger.LogInformation("Fetching all books");
-            return Ok(await _bookService.GetBooksAsync());
-        }
+            var books = await _bookService.GetAllBooks();
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBook(int id)
-        {
-            var book = await _bookService.GetBookByIdAsync(id);
-            if (book == null)
+            // Map the Book entity to BookDTO
+            var booksDTO = books.Select(book => new BookDTO
             {
-                _logger.LogWarning("Book with id {BookId} not found", id);
-                return NotFound();
-            }
-            return Ok(book);
+                Id = book.Id,
+                Title = book.Title,
+                AuthorName = book.Author?.Name, 
+                CategoryName = book.Category?.Name,
+                Price = book.Price ?? 0, 
+                PublicationDate = book.PublicationDate ?? DateTime.Now 
+            }).ToList();
+
+            return Ok(booksDTO);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Book>> CreateBook(Book book)
+        // GET: api/books/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<BookDTO>> GetBook(int id)
         {
-            await _bookService.AddBookAsync(book);
-            return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
+            var book = await _bookService.GetBookById(id);
+
+            if (book == null) return NotFound();
+
+            // Map the Book entity to BookDTO
+            var bookDTO = new BookDTO
+            {
+                Id = book.Id,
+                Title = book.Title,
+                AuthorName = book.Author?.Name,
+                CategoryName = book.Category?.Name,
+                Price = book.Price ?? 0,
+                PublicationDate = book.PublicationDate ?? DateTime.Now
+            };
+
+            return Ok(bookDTO);
         }
 
+        // POST: api/books
+        [HttpPost]
+        public async Task<ActionResult> AddBook([FromBody] Book book)
+        {
+            try
+            {
+                _logger.LogInformation("Adding a new book with title: {title}", book.Title);
+                await _bookService.AddBook(book);
+                return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding a new book");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        // PUT: api/books/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateBook(int id, Book book)
+        public async Task<IActionResult> UpdateBook(int id, [FromBody] Book book)
         {
             if (id != book.Id)
             {
+                _logger.LogWarning("Book ID in request body does not match URL parameter: {id}", id);
                 return BadRequest();
             }
-            await _bookService.UpdateBookAsync(book);
-            return NoContent();
+
+            try
+            {
+                _logger.LogInformation("Updating book with ID {id}", id);
+                await _bookService.UpdateBook(book);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while updating book with ID {id}", id);
+                return StatusCode(500, "Internal server error");
+            }
         }
 
+        // DELETE: api/books/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook(int id)
         {
-            await _bookService.DeleteBookAsync(id);
-            return NoContent();
+            try
+            {
+                _logger.LogInformation("Deleting book with ID {id}", id);
+                await _bookService.DeleteBook(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting book with ID {id}", id);
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
 }

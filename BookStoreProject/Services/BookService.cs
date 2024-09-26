@@ -1,5 +1,5 @@
-﻿using BookStoreProject.Interfaces;
-using BookStoreProject.Models;
+﻿using BookStoreProject.Models;
+using BookStoreProject.Repositories;
 
 namespace BookStoreProject.Services
 {
@@ -12,32 +12,29 @@ namespace BookStoreProject.Services
             _bookRepository = bookRepository;
         }
 
-        public async Task<IEnumerable<Book>> GetBooksAsync()
+        public async Task<IEnumerable<Book>> GetAllBooks()
         {
-            return await _bookRepository.GetBooksAsync();
+            return await _bookRepository.GetAllBooks();
         }
 
-        public async Task<Book> GetBookByIdAsync(int id)
+        public async Task<Book> GetBookById(int id)
         {
-            return await _bookRepository.GetBookByIdAsync(id);
+            return await _bookRepository.GetBookById(id);
         }
 
-        public async Task AddBookAsync(Book book)
+        public async Task AddBook(Book book)
         {
-            await _bookRepository.AddBookAsync(book);
-            await _bookRepository.SaveChangesAsync();
+            await _bookRepository.AddBook(book);  // Implement the method
         }
 
-        public async Task UpdateBookAsync(Book book)
+        public async Task UpdateBook(Book book)
         {
-            await _bookRepository.UpdateBookAsync(book);
-            await _bookRepository.SaveChangesAsync();
+            await _bookRepository.UpdateBook(book);
         }
 
-        public async Task DeleteBookAsync(int id)
+        public async Task DeleteBook(int id)
         {
-            await _bookRepository.DeleteBookAsync(id);
-            await _bookRepository.SaveChangesAsync();
+            await _bookRepository.DeleteBook(id);
         }
     }
 }

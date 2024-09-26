@@ -1,13 +1,15 @@
 ﻿using BookStoreProject.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace BookStoreProject.Interfaces
+namespace BookStoreProject.Services
 {
     public interface IBookService
     {
-        Task<IEnumerable<Book>> GetBooksAsync();
-        Task<Book> GetBookByIdAsync(int id);
-        Task AddBookAsync(Book book);
-        Task UpdateBookAsync(Book book);
-        Task DeleteBookAsync(int id);
+        Task<IEnumerable<Book>> GetAllBooks();
+        Task<Book> GetBookById(int id);
+        Task AddBook(Book book);  // Add this method
+        Task UpdateBook(Book book);
+        Task DeleteBook(int id);
     }
 }

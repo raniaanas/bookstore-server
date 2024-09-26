@@ -1,12 +1,17 @@
 using BookStoreProject.Data;
-using BookStoreProject.Interfaces;
 using BookStoreProject.Repositories;
 using BookStoreProject.Services;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System.Globalization;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
 
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
@@ -22,6 +27,9 @@ builder.Services.AddDbContext<BookstoreDbContext>(options =>
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
+
+
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

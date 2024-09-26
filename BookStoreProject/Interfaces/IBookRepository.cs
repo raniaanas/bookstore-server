@@ -1,14 +1,13 @@
 ﻿using BookStoreProject.Models;
 
-namespace BookStoreProject.Interfaces
+namespace BookStoreProject.Repositories
 {
     public interface IBookRepository
     {
-        Task<IEnumerable<Book>> GetBooksAsync();
-        Task<Book> GetBookByIdAsync(int id);
-        Task AddBookAsync(Book book);
-        Task UpdateBookAsync(Book book);
-        Task DeleteBookAsync(int id);
-        Task<bool> SaveChangesAsync();
+        Task<IEnumerable<Book>> GetAllBooks();
+        Task<Book> GetBookById(int id);
+        Task AddBook(Book book);  // Ensure this method exists
+        Task UpdateBook(Book book);
+        Task DeleteBook(int id);
     }
 }

@@ -1,0 +1,77 @@
+2024-09-27 01:14:58.857 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 01:14:58.877 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 01:14:58.878 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 01:14:58.878 +03:00 [INF] Hosting environment: Development
+2024-09-27 01:14:58.878 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 01:14:59.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 01:14:59.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 234.3462ms
+2024-09-27 01:14:59.547 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 01:14:59.550 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 3.4029ms
+2024-09-27 01:14:59.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 01:14:59.601 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.9809ms
+2024-09-27 01:14:59.620 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 01:14:59.679 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.7001ms
+2024-09-27 01:32:53.048 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 01:32:53.137 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 01:33:49.537 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 01:33:49.920 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-27 01:33:49.931 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-27 01:33:49.932 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-27 01:33:49.932 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-27 01:33:49.944 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-27 01:33:49.950 +03:00 [INF] Applying migration '20240926223253_AddAuthorAndCatalog'.
+2024-09-27 01:33:50.004 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Books]') AND [c].[name] = N'Author');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Books] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Books] DROP COLUMN [Author];
+2024-09-27 01:33:50.007 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] ADD [AuthorId] int NOT NULL DEFAULT 0;
+2024-09-27 01:33:50.008 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] ADD [CategoryId] int NOT NULL DEFAULT 0;
+2024-09-27 01:33:50.010 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Authors] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Authors] PRIMARY KEY ([Id])
+);
+2024-09-27 01:33:50.011 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-27 01:33:50.013 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Books_AuthorId] ON [Books] ([AuthorId]);
+2024-09-27 01:33:50.013 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Books_CategoryId] ON [Books] ([CategoryId]);
+2024-09-27 01:33:50.014 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] ADD CONSTRAINT [FK_Books_Authors_AuthorId] FOREIGN KEY ([AuthorId]) REFERENCES [Authors] ([Id]) ON DELETE CASCADE;
+2024-09-27 01:33:50.015 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] ADD CONSTRAINT [FK_Books_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE;
+2024-09-27 01:33:50.016 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240926223253_AddAuthorAndCatalog', N'8.0.8');
+2024-09-27 01:34:02.528 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 01:34:02.542 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 01:34:02.543 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 01:34:02.543 +03:00 [INF] Hosting environment: Development
+2024-09-27 01:34:02.543 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 01:34:02.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 01:34:03.144 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 217.1659ms
+2024-09-27 01:34:03.149 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 01:34:03.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 2.6806ms
+2024-09-27 01:34:03.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 01:34:03.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.4727ms
+2024-09-27 01:34:03.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 01:34:03.256 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.5883ms
