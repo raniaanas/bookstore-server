@@ -1,0 +1,14 @@
+﻿# Ignore Visual Studio temporary files, build results, and
+# build directories.
+.vs/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+# Ignore build results
+bin/
+obj/
+
+# Ignore other common files that shouldn't be tracked
+*.log
