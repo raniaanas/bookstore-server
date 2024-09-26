@@ -25,7 +25,6 @@ namespace BookStoreProject.Controllers
         {
             var books = await _bookService.GetAllBooks();
 
-            // Map the Book entity to BookDTO
             var booksDTO = books.Select(book => new BookDTO
             {
                 Id = book.Id,
