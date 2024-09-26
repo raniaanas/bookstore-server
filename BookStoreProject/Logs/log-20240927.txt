@@ -75,3 +75,29 @@ VALUES (N'20240926223253_AddAuthorAndCatalog', N'8.0.8');
 2024-09-27 01:34:03.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.4727ms
 2024-09-27 01:34:03.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
 2024-09-27 01:34:03.256 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.5883ms
+2024-09-27 01:39:03.803 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 01:39:03.817 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 01:39:03.818 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 01:39:03.818 +03:00 [INF] Hosting environment: Development
+2024-09-27 01:39:03.818 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 01:39:06.841 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 01:39:07.012 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 173.0082ms
+2024-09-27 01:39:07.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 01:39:07.022 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.0416ms
+2024-09-27 01:39:07.031 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 01:39:07.050 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.8387ms
+2024-09-27 01:39:07.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 01:39:07.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.5615ms
+2024-09-27 02:03:48.252 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 02:03:48.267 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 02:03:48.268 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 02:03:48.268 +03:00 [INF] Hosting environment: Development
+2024-09-27 02:03:48.268 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 02:03:51.092 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 02:03:51.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 164.2732ms
+2024-09-27 02:03:51.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 02:03:51.265 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 3.9986ms
+2024-09-27 02:03:51.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 02:03:51.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.1994ms
+2024-09-27 02:03:51.321 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 02:03:51.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.7288ms

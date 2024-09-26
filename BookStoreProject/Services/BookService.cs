@@ -24,7 +24,7 @@ namespace BookStoreProject.Services
 
         public async Task AddBook(Book book)
         {
-            await _bookRepository.AddBook(book);  // Implement the method
+            await _bookRepository.AddBook(book);  
         }
 
         public async Task UpdateBook(Book book)

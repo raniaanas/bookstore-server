@@ -25,7 +25,7 @@ namespace BookStoreProject.Repositories
 
         public async Task AddBook(Book book)
         {
-            await _context.Books.AddAsync(book);  // Add book to the database
+            await _context.Books.AddAsync(book); 
             await _context.SaveChangesAsync();
         }
 

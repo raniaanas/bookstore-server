@@ -1,6 +1,4 @@
 ﻿using BookStoreProject.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace BookStoreProject.Services
 {
@@ -8,7 +6,7 @@ namespace BookStoreProject.Services
     {
         Task<IEnumerable<Book>> GetAllBooks();
         Task<Book> GetBookById(int id);
-        Task AddBook(Book book);  // Add this method
+        Task AddBook(Book book);
         Task UpdateBook(Book book);
         Task DeleteBook(int id);
     }

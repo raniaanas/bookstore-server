@@ -6,7 +6,7 @@ namespace BookStoreProject.Repositories
     {
         Task<IEnumerable<Book>> GetAllBooks();
         Task<Book> GetBookById(int id);
-        Task AddBook(Book book);  // Ensure this method exists
+        Task AddBook(Book book);  
         Task UpdateBook(Book book);
         Task DeleteBook(int id);
     }

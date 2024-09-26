@@ -47,7 +47,6 @@ namespace BookStoreProject.Controllers
 
             if (book == null) return NotFound();
 
-            // Map the Book entity to BookDTO
             var bookDTO = new BookDTO
             {
                 Id = book.Id,
