@@ -4016,3 +4016,636 @@ WHERE [b].[Id] = @__id_0
 2024-09-27 14:58:22.359 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject) in 2053.4568ms
 2024-09-27 14:58:22.359 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
 2024-09-27 14:58:22.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books/1 - 200 null application/json; charset=utf-8 2054.8477ms
+2024-09-27 14:58:54.465 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 14:58:54.481 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 14:58:54.482 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 14:58:54.482 +03:00 [INF] Hosting environment: Development
+2024-09-27 14:58:54.482 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 14:58:54.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 14:58:54.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 14:58:54.645 +03:00 [INF] CORS policy execution successful.
+2024-09-27 14:58:54.645 +03:00 [INF] CORS policy execution successful.
+2024-09-27 14:58:54.653 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 14:58:54.653 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 14:58:54.662 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 14:58:54.662 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 14:58:54.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 14:58:55.147 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 329.8428ms
+2024-09-27 14:58:55.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 14:58:55.156 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.5059ms
+2024-09-27 14:58:55.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 14:58:55.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.7294ms
+2024-09-27 14:58:55.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 14:58:55.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.5684ms
+2024-09-27 14:58:55.394 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 14:58:56.171 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 14:58:56.171 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 14:58:56.192 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 14:58:56.202 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 14:58:56.205 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 1541.8988ms
+2024-09-27 14:58:56.205 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 1541.9015ms
+2024-09-27 14:58:56.206 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 14:58:56.206 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 14:58:56.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 1586.3988ms
+2024-09-27 14:58:56.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 1586.4016ms
+2024-09-27 14:58:56.872 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 14:58:56.872 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 14:58:56.873 +03:00 [INF] CORS policy execution successful.
+2024-09-27 14:58:56.873 +03:00 [INF] CORS policy execution successful.
+2024-09-27 14:58:56.874 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 14:58:56.874 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 14:58:56.874 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 14:58:56.874 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 14:58:56.922 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 14:58:56.922 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 14:58:56.922 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 14:58:56.922 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 14:58:56.922 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 48.2301ms
+2024-09-27 14:58:56.922 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 39.6162ms
+2024-09-27 14:58:56.922 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 14:58:56.922 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 14:58:56.922 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 50.4596ms
+2024-09-27 14:58:56.922 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 50.6027ms
+2024-09-27 14:58:58.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 14:58:58.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/Authors - null null
+2024-09-27 14:58:58.914 +03:00 [INF] CORS policy execution successful.
+2024-09-27 14:58:58.914 +03:00 [INF] CORS policy execution successful.
+2024-09-27 14:58:58.914 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 14:58:58.914 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 14:58:58.915 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 14:58:58.923 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 14:58:58.924 +03:00 [INF] Route matched with {action = "GetAuthors", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.AuthorDTO]]] GetAuthors() on controller BookStoreProject.Controllers.AuthorsController (BookStoreProject).
+2024-09-27 14:58:58.924 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 14:58:58.924 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 9.7159ms
+2024-09-27 14:58:58.924 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 14:58:58.925 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 10.9794ms
+2024-09-27 14:58:58.934 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name]
+FROM [Authors] AS [a]
+2024-09-27 14:58:58.943 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Author, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.AuthorDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 14:58:58.945 +03:00 [INF] Executed action BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject) in 21.2466ms
+2024-09-27 14:58:58.945 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 14:58:58.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/Authors - 200 null application/json; charset=utf-8 31.2225ms
+2024-09-27 15:00:23.644 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7010/api/books - null null
+2024-09-27 15:00:23.644 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:23.645 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7010/api/books - 204 null null 1.5553ms
+2024-09-27 15:00:23.646 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7010/api/books - application/json 107
+2024-09-27 15:00:23.647 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:23.647 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.AddBook (BookStoreProject)'
+2024-09-27 15:00:23.654 +03:00 [INF] Route matched with {action = "AddBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddBook(BookStoreProject.Models.Book) on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:23.739 +03:00 [INF] Adding a new book with title: The End of Everything
+2024-09-27 15:00:23.884 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Books] ([AuthorId], [CategoryId], [Price], [PublicationDate], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-09-27 15:00:23.907 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'BookStoreProject.Models.Book'.
+2024-09-27 15:00:23.923 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.AddBook (BookStoreProject) in 268.2999ms
+2024-09-27 15:00:23.923 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.AddBook (BookStoreProject)'
+2024-09-27 15:00:23.923 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7010/api/books - 201 null application/json; charset=utf-8 276.4791ms
+2024-09-27 15:00:23.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:00:23.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:00:23.930 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:23.930 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:23.930 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:23.930 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:23.931 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:23.931 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:00:23.933 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:00:23.935 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:23.935 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 4.592ms
+2024-09-27 15:00:23.935 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:23.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 5.3808ms
+2024-09-27 15:00:23.936 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:00:23.936 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:23.936 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 5.8726ms
+2024-09-27 15:00:23.936 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:23.937 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 7.2093ms
+2024-09-27 15:00:29.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:00:29.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:00:29.637 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:29.637 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:29.637 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:29.637 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:29.637 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:00:29.637 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:29.643 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:00:29.645 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:29.645 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 8.1824ms
+2024-09-27 15:00:29.645 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:29.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 9.6166ms
+2024-09-27 15:00:29.659 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:00:29.660 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:29.660 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 23.0288ms
+2024-09-27 15:00:29.660 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:29.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 24.5875ms
+2024-09-27 15:00:32.972 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books/1 - null null
+2024-09-27 15:00:32.973 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:32.973 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:00:32.978 +03:00 [INF] Route matched with {action = "GetBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BookStoreProject.DTOs.BookDTO]] GetBook(Int32) on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:33.015 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title], [a].[Id], [a].[Name], [c].[Id], [c].[Name]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+WHERE [b].[Id] = @__id_0
+2024-09-27 15:00:33.024 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookStoreProject.DTOs.BookDTO'.
+2024-09-27 15:00:33.024 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject) in 46.4505ms
+2024-09-27 15:00:33.024 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:00:33.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books/1 - 200 null application/json; charset=utf-8 52.0107ms
+2024-09-27 15:00:34.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:00:34.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:00:34.681 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:34.681 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:34.682 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:34.682 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:34.682 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:00:34.682 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:34.683 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:00:34.685 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:00:34.685 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:34.686 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 4.1658ms
+2024-09-27 15:00:34.686 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:34.686 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:34.686 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 4.7317ms
+2024-09-27 15:00:34.686 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 4.4203ms
+2024-09-27 15:00:34.686 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:34.686 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 5.6435ms
+2024-09-27 15:00:37.127 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books/1 - null null
+2024-09-27 15:00:37.127 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:37.127 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:00:37.127 +03:00 [INF] Route matched with {action = "GetBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BookStoreProject.DTOs.BookDTO]] GetBook(Int32) on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:37.131 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title], [a].[Id], [a].[Name], [c].[Id], [c].[Name]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+WHERE [b].[Id] = @__id_0
+2024-09-27 15:00:37.132 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookStoreProject.DTOs.BookDTO'.
+2024-09-27 15:00:37.133 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject) in 5.4644ms
+2024-09-27 15:00:37.133 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:00:37.133 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books/1 - 200 null application/json; charset=utf-8 6.0949ms
+2024-09-27 15:00:39.385 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7010/api/books/1 - null null
+2024-09-27 15:00:39.385 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:39.385 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7010/api/books/1 - 204 null null 0.6517ms
+2024-09-27 15:00:39.386 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7010/api/books/1 - null null
+2024-09-27 15:00:39.387 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:39.387 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.DeleteBook (BookStoreProject)'
+2024-09-27 15:00:39.390 +03:00 [INF] Route matched with {action = "DeleteBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBook(Int32) on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:39.391 +03:00 [INF] Deleting book with ID 1
+2024-09-27 15:00:39.407 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__p_0
+2024-09-27 15:00:39.417 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-09-27 15:00:39.423 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-09-27 15:00:39.423 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.DeleteBook (BookStoreProject) in 32.9893ms
+2024-09-27 15:00:39.423 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.DeleteBook (BookStoreProject)'
+2024-09-27 15:00:39.423 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7010/api/books/1 - 204 null null 36.8625ms
+2024-09-27 15:00:39.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:00:39.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:00:39.429 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:39.429 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:00:39.429 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:39.429 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:39.430 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:00:39.430 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:00:39.432 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:00:39.433 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:00:39.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:39.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:00:39.437 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 7.6727ms
+2024-09-27 15:00:39.438 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:00:39.438 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 8.0204ms
+2024-09-27 15:00:39.438 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:00:39.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 8.777ms
+2024-09-27 15:00:39.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 9.0397ms
+2024-09-27 15:01:00.716 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:00.716 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:01:00.716 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:00.716 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:00.716 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:00.716 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:00.717 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:00.717 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:00.723 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:01:00.723 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:00.724 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:00.724 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:00.724 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 7.2529ms
+2024-09-27 15:01:00.724 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 7.2389ms
+2024-09-27 15:01:00.724 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:00.724 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:00.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 8.2187ms
+2024-09-27 15:01:00.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 10.549ms
+2024-09-27 15:01:05.149 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:05.149 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:01:05.149 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:05.149 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:05.149 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:05.149 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:05.149 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:05.150 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:05.156 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:05.158 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:05.158 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 8.3101ms
+2024-09-27 15:01:05.158 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:05.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 9.4454ms
+2024-09-27 15:01:05.171 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:01:05.171 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:05.171 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 21.8226ms
+2024-09-27 15:01:05.171 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:05.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 22.6638ms
+2024-09-27 15:01:06.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books/2 - null null
+2024-09-27 15:01:06.981 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:06.981 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:01:06.981 +03:00 [INF] Route matched with {action = "GetBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BookStoreProject.DTOs.BookDTO]] GetBook(Int32) on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:06.985 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title], [a].[Id], [a].[Name], [c].[Id], [c].[Name]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+WHERE [b].[Id] = @__id_0
+2024-09-27 15:01:06.985 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookStoreProject.DTOs.BookDTO'.
+2024-09-27 15:01:06.985 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject) in 3.8702ms
+2024-09-27 15:01:06.985 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:01:06.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books/2 - 200 null application/json; charset=utf-8 4.4166ms
+2024-09-27 15:01:10.540 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:01:10.541 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:10.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:10.541 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:10.541 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:10.541 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:10.541 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:10.541 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:10.549 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:01:10.549 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:10.549 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:10.549 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:10.549 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 8.5255ms
+2024-09-27 15:01:10.549 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:10.549 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 8.5602ms
+2024-09-27 15:01:10.549 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:10.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 8.9203ms
+2024-09-27 15:01:10.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 9.4245ms
+2024-09-27 15:01:12.294 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books/2 - null null
+2024-09-27 15:01:12.294 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:12.294 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:01:12.294 +03:00 [INF] Route matched with {action = "GetBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BookStoreProject.DTOs.BookDTO]] GetBook(Int32) on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:12.296 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title], [a].[Id], [a].[Name], [c].[Id], [c].[Name]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+WHERE [b].[Id] = @__id_0
+2024-09-27 15:01:12.297 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookStoreProject.DTOs.BookDTO'.
+2024-09-27 15:01:12.297 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject) in 3.2027ms
+2024-09-27 15:01:12.297 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBook (BookStoreProject)'
+2024-09-27 15:01:12.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books/2 - 200 null application/json; charset=utf-8 4.0336ms
+2024-09-27 15:01:14.433 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:01:14.433 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:14.433 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:14.434 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:14.434 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:14.434 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:14.434 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:14.434 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:14.435 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:14.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:14.437 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 3.4912ms
+2024-09-27 15:01:14.437 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:01:14.437 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:14.437 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 3.9931ms
+2024-09-27 15:01:14.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:14.437 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 3.8068ms
+2024-09-27 15:01:14.437 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:14.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 4.8787ms
+2024-09-27 15:01:18.794 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/Authors - null null
+2024-09-27 15:01:18.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:18.795 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:18.795 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:18.795 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:18.795 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 15:01:18.795 +03:00 [INF] Route matched with {action = "GetAuthors", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.AuthorDTO]]] GetAuthors() on controller BookStoreProject.Controllers.AuthorsController (BookStoreProject).
+2024-09-27 15:01:18.795 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:18.797 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:18.798 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:18.798 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name]
+FROM [Authors] AS [a]
+2024-09-27 15:01:18.801 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 5.7515ms
+2024-09-27 15:01:18.801 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:18.801 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Author, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.AuthorDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:18.801 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 6.1664ms
+2024-09-27 15:01:18.801 +03:00 [INF] Executed action BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject) in 5.9898ms
+2024-09-27 15:01:18.801 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 15:01:18.801 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/Authors - 200 null application/json; charset=utf-8 6.7787ms
+2024-09-27 15:01:20.908 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:01:20.909 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:20.909 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:20.909 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:20.909 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:20.909 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:20.909 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:20.909 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:20.912 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:20.913 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:01:20.913 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:20.913 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:20.913 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 3.7412ms
+2024-09-27 15:01:20.913 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 4.455ms
+2024-09-27 15:01:20.913 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:20.913 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:20.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 5.0508ms
+2024-09-27 15:01:20.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 4.2204ms
+2024-09-27 15:01:25.912 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/Authors - null null
+2024-09-27 15:01:25.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:25.913 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:25.913 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:25.913 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 15:01:25.913 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:25.913 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:25.913 +03:00 [INF] Route matched with {action = "GetAuthors", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.AuthorDTO]]] GetAuthors() on controller BookStoreProject.Controllers.AuthorsController (BookStoreProject).
+2024-09-27 15:01:25.923 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name]
+FROM [Authors] AS [a]
+2024-09-27 15:01:25.923 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:25.924 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Author, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.AuthorDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:25.924 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:25.924 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 10.7172ms
+2024-09-27 15:01:25.924 +03:00 [INF] Executed action BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject) in 10.6945ms
+2024-09-27 15:01:25.924 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:25.924 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 15:01:25.924 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/Authors - 200 null application/json; charset=utf-8 11.7039ms
+2024-09-27 15:01:25.924 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 11.2635ms
+2024-09-27 15:01:27.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:01:27.338 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:27.338 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:27.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:01:27.338 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:01:27.338 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:01:27.338 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:27.338 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:01:27.346 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:01:27.346 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:27.346 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 8.2297ms
+2024-09-27 15:01:27.346 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:01:27.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 9.035ms
+2024-09-27 15:01:27.347 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:01:27.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:01:27.347 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 8.8094ms
+2024-09-27 15:01:27.347 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:01:27.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 9.9435ms
+2024-09-27 15:02:53.518 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/Authors - null null
+2024-09-27 15:02:53.518 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:02:53.519 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 15:02:53.519 +03:00 [INF] Route matched with {action = "GetAuthors", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.AuthorDTO]]] GetAuthors() on controller BookStoreProject.Controllers.AuthorsController (BookStoreProject).
+2024-09-27 15:02:53.523 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:02:53.525 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:02:53.525 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:02:53.525 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:02:53.530 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:02:53.530 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name]
+FROM [Authors] AS [a]
+2024-09-27 15:02:53.530 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:02:53.530 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Author, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.AuthorDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:02:53.530 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 5.3171ms
+2024-09-27 15:02:53.530 +03:00 [INF] Executed action BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject) in 10.2633ms
+2024-09-27 15:02:53.530 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:02:53.530 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.AuthorsController.GetAuthors (BookStoreProject)'
+2024-09-27 15:02:53.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 7.6103ms
+2024-09-27 15:02:53.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/Authors - 200 null application/json; charset=utf-8 12.2417ms
+2024-09-27 15:02:55.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:02:55.197 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:02:55.197 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:02:55.197 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:02:55.197 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:02:55.197 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:02:55.197 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:02:55.197 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:02:55.201 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:02:55.201 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:02:55.201 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:02:55.201 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:02:55.201 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 4.6017ms
+2024-09-27 15:02:55.202 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 4.5466ms
+2024-09-27 15:02:55.202 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:02:55.202 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:02:55.202 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 5.6157ms
+2024-09-27 15:02:55.202 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 5.3545ms
+2024-09-27 15:05:26.824 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 15:05:26.908 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 15:05:36.758 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 15:05:37.136 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-27 15:05:37.149 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-27 15:05:37.150 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-27 15:05:37.150 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-27 15:05:37.160 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-27 15:05:37.166 +03:00 [INF] Applying migration '20240927120527_AddIsDeletedToBooks'.
+2024-09-27 15:05:37.187 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] ADD [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit);
+2024-09-27 15:05:37.188 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240927120527_AddIsDeletedToBooks', N'8.0.8');
+2024-09-27 15:32:33.585 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 15:32:33.600 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 15:32:33.601 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 15:32:33.601 +03:00 [INF] Hosting environment: Development
+2024-09-27 15:32:33.601 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 15:32:36.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 15:32:36.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 361.0399ms
+2024-09-27 15:32:36.855 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 15:32:36.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.8574ms
+2024-09-27 15:32:36.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 15:32:36.895 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.5866ms
+2024-09-27 15:32:36.964 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 15:32:37.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.4276ms
+2024-09-27 15:33:18.583 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:33:18.583 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:33:18.589 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:33:18.589 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:33:18.593 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:33:18.593 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:33:18.612 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:33:18.612 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:33:19.468 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 15:33:20.568 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:33:20.568 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 15:33:20.599 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:33:20.615 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:33:20.621 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 2005.6571ms
+2024-09-27 15:33:20.621 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2005.1095ms
+2024-09-27 15:33:20.621 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:33:20.621 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:33:20.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 2045.2205ms
+2024-09-27 15:33:20.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 2045.2049ms
+2024-09-27 15:35:52.983 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 15:35:52.998 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 15:35:52.999 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 15:35:52.999 +03:00 [INF] Hosting environment: Development
+2024-09-27 15:35:52.999 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 15:35:55.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 15:35:55.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 175.0793ms
+2024-09-27 15:35:55.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 15:35:55.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 15:35:55.882 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 2.7117ms
+2024-09-27 15:35:55.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.7678ms
+2024-09-27 15:35:55.922 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 15:35:55.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.5944ms
+2024-09-27 15:40:41.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:40:41.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:40:41.649 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:40:41.649 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:40:41.654 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:40:41.654 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:40:41.672 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:40:41.672 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:40:42.515 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 15:40:43.499 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+2024-09-27 15:40:43.499 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:40:43.536 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:40:43.553 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:40:43.559 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 1883.4574ms
+2024-09-27 15:40:43.559 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 1883.663ms
+2024-09-27 15:40:43.559 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:40:43.559 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:40:43.566 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 1922.3547ms
+2024-09-27 15:40:43.566 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 1922.4671ms
+2024-09-27 15:44:03.607 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 15:44:03.608 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 15:44:03.627 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:44:03.627 +03:00 [INF] CORS policy execution successful.
+2024-09-27 15:44:03.628 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:44:03.628 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:44:03.628 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 15:44:03.628 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 15:44:03.694 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 15:44:03.694 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [a].[Id] AS [AuthorId], [c].[Name] AS [CategoryName], [c].[Id] AS [CategoryId]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+2024-09-27 15:44:03.694 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:44:03.695 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 66.5326ms
+2024-09-27 15:44:03.695 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 15:44:03.695 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 15:44:03.695 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 66.885ms
+2024-09-27 15:44:03.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 87.0722ms
+2024-09-27 15:44:03.695 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 15:44:03.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 88.0182ms

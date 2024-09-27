@@ -19,6 +19,7 @@ namespace BookStoreProject.Repositories
             var books = await _context.Books
                 .Include(b => b.Author)
                 .Include(b => b.Category)
+                .Where(b => !b.IsDeleted)
                 .Select(b => new BookDTO
                 {
                     Id = b.Id,
@@ -63,7 +64,8 @@ namespace BookStoreProject.Repositories
             var book = await _context.Books.FindAsync(id);
             if (book != null)
             {
-                _context.Books.Remove(book);
+                book.IsDeleted = true;
+                _context.Entry(book).State = EntityState.Modified; 
                 await _context.SaveChangesAsync();
             }
         }
