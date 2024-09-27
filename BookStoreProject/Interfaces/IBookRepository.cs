@@ -5,7 +5,7 @@ namespace BookStoreProject.Repositories
 {
     public interface IBookRepository
     {
-        Task<IEnumerable<BookDTO>> GetAllBooks();
+        Task<List<BookDTO>> GetAllBooks();
         Task<Book> GetBookById(int id);
         Task AddBook(Book book);  
         Task UpdateBook(Book book);

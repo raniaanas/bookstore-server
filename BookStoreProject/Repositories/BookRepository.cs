@@ -14,7 +14,7 @@ namespace BookStoreProject.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<BookDTO>> GetAllBooks()
+        public async Task<List<BookDTO>> GetAllBooks()
         {
             var books = await _context.Books
                 .Include(b => b.Author)

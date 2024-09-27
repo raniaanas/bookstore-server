@@ -13,7 +13,7 @@ namespace BookStoreProject.Services
             _bookRepository = bookRepository;
         }
 
-        public async Task<IEnumerable<BookDTO>> GetAllBooks()
+        public async Task<List<BookDTO>> GetAllBooks()
         {
             return await _bookRepository.GetAllBooks();
         }

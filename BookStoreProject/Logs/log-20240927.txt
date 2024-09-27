@@ -1184,3 +1184,392 @@ FROM [Books] AS [b]
 2024-09-27 12:43:33.987 +03:00 [INF] Application started. Press Ctrl+C to shut down.
 2024-09-27 12:43:33.988 +03:00 [INF] Hosting environment: Development
 2024-09-27 12:43:33.988 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 13:07:06.972 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 13:07:06.987 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 13:07:06.987 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 13:07:06.987 +03:00 [INF] Hosting environment: Development
+2024-09-27 13:07:06.987 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 13:07:10.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 13:07:10.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 308.2329ms
+2024-09-27 13:07:10.329 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:07:10.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.8167ms
+2024-09-27 13:07:10.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:07:10.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.1724ms
+2024-09-27 13:07:10.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 13:07:10.479 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.4867ms
+2024-09-27 13:07:16.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:07:16.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 13:07:16.779 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:07:16.779 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:07:16.784 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:07:16.785 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:07:16.797 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:07:16.797 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 13:07:17.659 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 13:07:18.488 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.IEnumerable`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[BookStoreProject.Services.BookService+<GetAllBooks>d__2, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:07:18.681 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 1880.6514ms
+2024-09-27 13:07:18.751 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:07:18.840 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO],BookStoreProject.Services.BookService+<GetAllBooks>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMember(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateJsonTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.CachingContext.GetOrAddTypeInfo(Type type, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-27 13:07:18.994 +03:00 [ERR] An error occurred using the connection to database 'BookStore' on server 'DC-GIS-RANIA\RANIA2022'.
+2024-09-27 13:07:19.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 500 null text/plain; charset=utf-8 2260.4981ms
+2024-09-27 13:07:19.372 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 13:07:19.428 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:07:19.433 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2635.5022ms
+2024-09-27 13:07:19.434 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:07:19.434 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 2665.9427ms
+2024-09-27 13:07:35.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:07:35.147 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:07:35.147 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:07:35.209 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.IEnumerable`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[BookStoreProject.Services.BookService+<GetAllBooks>d__2, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:07:35.291 +03:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [c].[Name] AS [CategoryName]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 13:07:35.367 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 219.8892ms
+2024-09-27 13:07:35.417 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:07:35.530 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO],BookStoreProject.Services.BookService+<GetAllBooks>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMember(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateJsonTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.CachingContext.GetOrAddTypeInfo(Type type, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-27 13:07:35.590 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 500 null text/html; charset=utf-8 451.1106ms
+2024-09-27 13:07:35.597 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:07:35.597 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:07:35.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 1.2843ms
+2024-09-27 13:07:35.615 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.9621ms
+2024-09-27 13:07:35.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/favicon.ico - null null
+2024-09-27 13:07:35.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/favicon.ico - 404 0 null 1.433ms
+2024-09-27 13:07:35.651 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/favicon.ico, Response status code: 404
+2024-09-27 13:10:44.115 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 13:10:44.130 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 13:10:44.131 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 13:10:44.131 +03:00 [INF] Hosting environment: Development
+2024-09-27 13:10:44.131 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 13:10:46.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 13:10:47.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 169.3706ms
+2024-09-27 13:10:47.030 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:10:47.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 2.5134ms
+2024-09-27 13:10:47.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:10:47.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.7824ms
+2024-09-27 13:10:47.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 13:10:47.137 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.4651ms
+2024-09-27 13:10:50.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 13:10:50.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:10:50.107 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:10:50.107 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:10:50.113 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:10:50.113 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:10:50.126 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 13:10:50.126 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:10:50.914 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 13:10:51.582 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[BookStoreProject.Services.BookService+<GetAllBooks>d__2, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:10:51.718 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 1563.2755ms
+2024-09-27 13:10:51.737 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:10:51.776 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.List`1[BookStoreProject.DTOs.BookDTO],BookStoreProject.Services.BookService+<GetAllBooks>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMember(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateJsonTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.CachingContext.GetOrAddTypeInfo(Type type, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-27 13:10:51.884 +03:00 [ERR] An error occurred using the connection to database 'BookStore' on server 'DC-GIS-RANIA\RANIA2022'.
+2024-09-27 13:10:51.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 500 null text/plain; charset=utf-8 1805.2868ms
+2024-09-27 13:10:52.082 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 13:10:52.138 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:10:52.142 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2015.7616ms
+2024-09-27 13:10:52.143 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:10:52.143 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 2047.5814ms
+2024-09-27 13:10:58.414 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:10:58.422 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:10:58.423 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:10:58.486 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[BookStoreProject.Services.BookService+<GetAllBooks>d__2, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:10:58.551 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [c].[Name] AS [CategoryName]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 13:10:58.637 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 213.8259ms
+2024-09-27 13:10:58.684 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:10:58.797 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.List`1[BookStoreProject.DTOs.BookDTO],BookStoreProject.Services.BookService+<GetAllBooks>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMember(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateJsonTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.CachingContext.GetOrAddTypeInfo(Type type, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-27 13:10:58.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 500 null text/html; charset=utf-8 441.1753ms
+2024-09-27 13:10:58.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:10:58.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:10:58.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 1.2862ms
+2024-09-27 13:10:58.882 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.7075ms
+2024-09-27 13:10:58.911 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/favicon.ico - null null
+2024-09-27 13:10:58.912 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/favicon.ico - 404 0 null 1.0003ms
+2024-09-27 13:10:58.912 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/favicon.ico, Response status code: 404
+2024-09-27 13:13:02.027 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 13:13:02.043 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 13:13:02.044 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 13:13:02.044 +03:00 [INF] Hosting environment: Development
+2024-09-27 13:13:02.044 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 13:13:05.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 13:13:05.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 232.4821ms
+2024-09-27 13:13:05.546 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:13:05.551 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 5.3908ms
+2024-09-27 13:13:05.559 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:13:05.591 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.4741ms
+2024-09-27 13:13:05.609 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 13:13:05.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.2182ms
+2024-09-27 13:13:47.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:13:47.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 13:13:47.186 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:13:47.186 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:13:47.190 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:13:47.190 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:13:47.209 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:13:47.209 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 13:13:48.042 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 13:13:48.666 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[BookStoreProject.Services.BookService+<GetAllBooks>d__2, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:13:48.887 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 1674.2463ms
+2024-09-27 13:13:48.928 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:13:49.005 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.List`1[BookStoreProject.DTOs.BookDTO],BookStoreProject.Services.BookService+<GetAllBooks>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMember(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateJsonTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.CachingContext.GetOrAddTypeInfo(Type type, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-27 13:13:49.137 +03:00 [ERR] An error occurred using the connection to database '' on server ''.
+2024-09-27 13:13:49.195 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 500 null text/plain; charset=utf-8 2015.0419ms
+2024-09-27 13:13:49.517 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 13:13:49.575 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:13:49.580 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2370.3249ms
+2024-09-27 13:13:49.580 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:13:49.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 2401.3239ms
+2024-09-27 13:13:51.026 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:13:51.033 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:13:51.033 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:13:51.097 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[BookStoreProject.Services.BookService+<GetAllBooks>d__2, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:13:51.186 +03:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [c].[Name] AS [CategoryName]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 13:13:51.247 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 213.3879ms
+2024-09-27 13:13:51.295 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 13:13:51.403 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.List`1[BookStoreProject.DTOs.BookDTO],BookStoreProject.Services.BookService+<GetAllBooks>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMember(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateJsonTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.CachingContext.GetOrAddTypeInfo(Type type, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-27 13:13:51.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 500 null text/html; charset=utf-8 434.4659ms
+2024-09-27 13:13:51.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:13:51.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:13:51.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 0.8474ms
+2024-09-27 13:13:51.487 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.4881ms
+2024-09-27 13:13:51.524 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/favicon.ico - null null
+2024-09-27 13:13:51.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/favicon.ico - 404 0 null 0.9744ms
+2024-09-27 13:13:51.525 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/favicon.ico, Response status code: 404
+2024-09-27 13:16:51.695 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 13:16:51.709 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 13:16:51.709 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 13:16:51.710 +03:00 [INF] Hosting environment: Development
+2024-09-27 13:16:51.710 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 13:16:54.640 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 13:16:54.807 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 169.7364ms
+2024-09-27 13:16:54.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 13:16:54.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 2.4345ms
+2024-09-27 13:16:54.823 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 13:16:54.844 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.9745ms
+2024-09-27 13:16:54.867 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 13:16:54.916 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.8311ms
+2024-09-27 13:16:58.668 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 13:16:58.668 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 13:16:58.681 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:16:58.683 +03:00 [INF] CORS policy execution successful.
+2024-09-27 13:16:58.687 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 13:16:58.687 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:16:58.705 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 13:16:58.705 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 13:16:59.482 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 13:17:00.356 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Title], [b].[Price], [b].[PublicationDate], [a].[Name] AS [AuthorName], [c].[Name] AS [CategoryName]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [b].[CategoryId] = [c].[Id]
+2024-09-27 13:17:00.356 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 13:17:00.387 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:17:00.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 13:17:00.409 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 1701.216ms
+2024-09-27 13:17:00.409 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject) in 1701.2505ms
+2024-09-27 13:17:00.409 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetAllBooks (BookStoreProject)'
+2024-09-27 13:17:00.409 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 13:17:00.416 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 1748.513ms
+2024-09-27 13:17:00.416 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 1748.5129ms

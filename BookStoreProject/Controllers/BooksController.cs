@@ -21,9 +21,9 @@ namespace BookStoreProject.Controllers
 
         // GET: api/books
         [HttpGet]
-        public IActionResult GetBooks()
+        public async Task<IActionResult> GetAllBooks()
         {
-            var books = _bookService.GetAllBooks();
+            var books = await _bookService.GetAllBooks();
             return Ok(books);
         }
 
