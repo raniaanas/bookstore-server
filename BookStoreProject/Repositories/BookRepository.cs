@@ -1,4 +1,5 @@
 ﻿using BookStoreProject.Data;
+using BookStoreProject.DTOs;
 using BookStoreProject.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,9 +14,23 @@ namespace BookStoreProject.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Book>> GetAllBooks()
+        public async Task<IEnumerable<BookDTO>> GetAllBooks()
         {
-            return await _context.Books.ToListAsync();
+            var books = await _context.Books
+                .Include(b => b.Author)
+                .Include(b => b.Category)
+                .Select(b => new BookDTO
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Price = b.Price,
+                    PublicationDate = b.PublicationDate,
+                    AuthorName = b.Author.Name,
+                    CategoryName = b.Category.Name
+                })
+                .ToListAsync();
+
+            return books;
         }
 
         public async Task<Book> GetBookById(int id)
@@ -25,7 +40,7 @@ namespace BookStoreProject.Repositories
 
         public async Task AddBook(Book book)
         {
-            await _context.Books.AddAsync(book); 
+            await _context.Books.AddAsync(book);
             await _context.SaveChangesAsync();
         }
 

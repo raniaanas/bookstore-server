@@ -1,4 +1,5 @@
-﻿using BookStoreProject.Models;
+﻿using BookStoreProject.DTOs;
+using BookStoreProject.Models;
 using BookStoreProject.Repositories;
 
 namespace BookStoreProject.Services
@@ -12,7 +13,7 @@ namespace BookStoreProject.Services
             _bookRepository = bookRepository;
         }
 
-        public async Task<IEnumerable<Book>> GetAllBooks()
+        public async Task<IEnumerable<BookDTO>> GetAllBooks()
         {
             return await _bookRepository.GetAllBooks();
         }

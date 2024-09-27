@@ -21,21 +21,10 @@ namespace BookStoreProject.Controllers
 
         // GET: api/books
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooks()
+        public IActionResult GetBooks()
         {
-            var books = await _bookService.GetAllBooks();
-
-            var booksDTO = books.Select(book => new BookDTO
-            {
-                Id = book.Id,
-                Title = book.Title,
-                AuthorName = book.Author?.Name, 
-                CategoryName = book.Category?.Name,
-                Price = book.Price ?? 0, 
-                PublicationDate = book.PublicationDate ?? DateTime.Now 
-            }).ToList();
-
-            return Ok(booksDTO);
+            var books = _bookService.GetAllBooks();
+            return Ok(books);
         }
 
         // GET: api/books/{id}
