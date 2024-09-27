@@ -37,7 +37,13 @@ namespace BookStoreProject.Repositories
 
         public async Task<Book> GetBookById(int id)
         {
-           return await _context.Books.FindAsync(id);
+           var bookById = await _context.Books.Include( x=> x.Author)
+                        .Include(x => x.Category)
+                        .FirstOrDefaultAsync(x=> x.Id == id);
+
+            if (bookById == null) throw new Exception("Book not found");
+            
+            return bookById;
         }
 
         public async Task AddBook(Book book)

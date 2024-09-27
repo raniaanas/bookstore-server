@@ -30,7 +30,7 @@ namespace BookStoreProject.Controllers
         // GET: api/books/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<BookDTO>> GetBook(int id)
-        {
+        {   
             var book = await _bookService.GetBookById(id);
 
             if (book == null) return NotFound();
