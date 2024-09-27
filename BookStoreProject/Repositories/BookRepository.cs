@@ -26,7 +26,9 @@ namespace BookStoreProject.Repositories
                     Price = b.Price,
                     PublicationDate = b.PublicationDate,
                     AuthorName = b.Author.Name,
-                    CategoryName = b.Category.Name
+                    AuthorId = b.Author.Id,
+                    CategoryName = b.Category.Name,
+                    CategoryId = b.Category.Id,
                 })
                 .ToListAsync();
 
@@ -35,7 +37,7 @@ namespace BookStoreProject.Repositories
 
         public async Task<Book> GetBookById(int id)
         {
-            return await _context.Books.FindAsync(id);
+           return await _context.Books.FindAsync(id);
         }
 
         public async Task AddBook(Book book)
