@@ -37,11 +37,13 @@ namespace BookStoreProject.Controllers
 
             var bookDTO = new BookDTO
             {
-                Id = book.Id,
+                Id = book.Id,   
                 Title = book.Title,
                 AuthorName = book.Author?.Name,
                 CategoryName = book.Category?.Name,
                 Price = book.Price ?? 0,
+                CategoryId = book.Category?.Id,
+                AuthorId = book.Author?.Id,
                 PublicationDate = book.PublicationDate ?? DateTime.Now
             };
 
