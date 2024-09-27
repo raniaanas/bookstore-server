@@ -383,3 +383,419 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2024-09-27 02:42:58.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.4917ms
 2024-09-27 02:42:58.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
 2024-09-27 02:42:58.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.4905ms
+2024-09-27 02:52:50.963 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 02:52:50.983 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 02:52:50.984 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 02:52:50.984 +03:00 [INF] Hosting environment: Development
+2024-09-27 02:52:50.984 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 02:52:54.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 02:52:54.252 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 157.3465ms
+2024-09-27 02:52:54.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 02:52:54.293 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.1538ms
+2024-09-27 02:52:54.308 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 02:52:54.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.955ms
+2024-09-27 02:52:54.396 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 02:52:54.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.5585ms
+2024-09-27 02:53:30.609 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 02:53:30.625 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 02:53:30.625 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 02:53:30.626 +03:00 [INF] Hosting environment: Development
+2024-09-27 02:53:30.626 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 02:53:30.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 02:53:31.088 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 163.4853ms
+2024-09-27 02:53:31.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 02:53:31.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 3.6159ms
+2024-09-27 02:53:31.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 02:53:31.128 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.6798ms
+2024-09-27 02:53:31.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 02:53:31.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.114ms
+2024-09-27 09:21:03.836 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 09:21:03.851 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 09:21:03.851 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 09:21:03.851 +03:00 [INF] Hosting environment: Development
+2024-09-27 09:21:03.851 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 09:21:06.726 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 09:21:07.028 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 305.4098ms
+2024-09-27 09:21:07.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 09:21:07.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.1382ms
+2024-09-27 09:21:07.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 09:21:07.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.3653ms
+2024-09-27 09:21:07.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 09:21:07.192 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.8547ms
+2024-09-27 09:21:09.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 09:21:09.939 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.9275ms
+2024-09-27 09:21:09.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/favicon.ico - null null
+2024-09-27 09:21:09.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/favicon.ico - 404 0 null 2.4198ms
+2024-09-27 09:21:09.979 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/favicon.ico, Response status code: 404
+2024-09-27 12:08:18.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/Categories/1 - null null
+2024-09-27 12:08:18.419 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategory (BookStoreProject)'
+2024-09-27 12:08:18.446 +03:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BookStoreProject.DTOs.CategoryDTO]] GetCategory(Int32) on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:08:19.334 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 12:08:20.548 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__p_0
+2024-09-27 12:08:20.611 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookStoreProject.DTOs.CategoryDTO'.
+2024-09-27 12:08:20.621 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategory (BookStoreProject) in 2172.3787ms
+2024-09-27 12:08:20.622 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategory (BookStoreProject)'
+2024-09-27 12:08:20.627 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/Categories/1 - 200 null application/json; charset=utf-8 2219.0362ms
+2024-09-27 12:14:07.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/Categories - null null
+2024-09-27 12:14:07.423 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:14:07.428 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:14:07.468 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:14:07.470 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:07.471 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 42.8178ms
+2024-09-27 12:14:07.471 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:14:07.471 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/Categories - 200 null application/json; charset=utf-8 53.367ms
+2024-09-27 12:14:45.010 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api//books - null null
+2024-09-27 12:14:45.010 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api//categories - null null
+2024-09-27 12:14:45.010 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api//books - 404 0 null 0.9329ms
+2024-09-27 12:14:45.011 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/api//books, Response status code: 404
+2024-09-27 12:14:45.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api//categories - 404 0 null 0.8189ms
+2024-09-27 12:14:45.011 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/api//categories, Response status code: 404
+2024-09-27 12:14:45.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api//books - null null
+2024-09-27 12:14:45.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api//books - 404 0 null 0.7241ms
+2024-09-27 12:14:45.624 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/api//books, Response status code: 404
+2024-09-27 12:14:45.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api//categories - null null
+2024-09-27 12:14:45.633 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api//categories - 404 0 null 5.6287ms
+2024-09-27 12:14:45.633 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/api//categories, Response status code: 404
+2024-09-27 12:14:48.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:14:48.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:14:48.117 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:14:48.117 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:48.117 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:14:48.121 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:14:48.181 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:14:48.182 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:48.182 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 64.7518ms
+2024-09-27 12:14:48.182 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:14:48.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 65.4442ms
+2024-09-27 12:14:48.186 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:14:48.187 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:48.198 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 77.1244ms
+2024-09-27 12:14:48.198 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:48.198 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 81.8282ms
+2024-09-27 12:14:48.598 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:14:48.599 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:48.599 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:14:48.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:14:48.606 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:14:48.606 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:14:48.628 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:14:48.629 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:48.629 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 30.5352ms
+2024-09-27 12:14:48.629 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:48.629 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 31.5267ms
+2024-09-27 12:14:48.709 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:14:48.710 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:48.710 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 103.828ms
+2024-09-27 12:14:48.710 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:14:48.710 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 104.9041ms
+2024-09-27 12:14:55.013 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:14:55.013 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:14:55.014 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:55.014 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.6728ms
+2024-09-27 12:14:55.014 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:14:55.014 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:14:55.023 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:14:55.023 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:55.023 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 9.2037ms
+2024-09-27 12:14:55.023 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:55.023 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 10.1721ms
+2024-09-27 12:14:55.302 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:14:55.302 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:55.302 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:14:55.305 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:14:55.305 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:14:55.306 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 2.6729ms
+2024-09-27 12:14:55.306 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:14:55.306 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:14:55.306 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 3.5847ms
+2024-09-27 12:14:55.306 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:14:55.306 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 4.3802ms
+2024-09-27 12:15:11.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:15:11.033 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:15:11.033 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:15:11.034 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:15:11.034 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.1608ms
+2024-09-27 12:15:11.034 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:15:11.037 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:15:11.037 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:15:11.038 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 4.4258ms
+2024-09-27 12:15:11.038 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:15:11.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 5.0363ms
+2024-09-27 12:15:11.336 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:15:11.336 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:15:11.336 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:15:11.339 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:15:11.339 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:15:11.340 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 3.2891ms
+2024-09-27 12:15:11.340 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:15:11.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 3.8299ms
+2024-09-27 12:15:11.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:15:11.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.4554ms
+2024-09-27 12:15:11.351 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:15:17.996 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:15:17.997 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:15:17.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.2151ms
+2024-09-27 12:15:17.997 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:15:17.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 1.1842ms
+2024-09-27 12:15:17.997 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:15:18.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:15:18.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.664ms
+2024-09-27 12:15:18.378 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:15:18.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:15:18.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.5579ms
+2024-09-27 12:15:18.384 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:21.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:21.719 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:21.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.1768ms
+2024-09-27 12:21:21.719 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:21.720 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 1.9489ms
+2024-09-27 12:21:21.720 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:21.946 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:21.947 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.4594ms
+2024-09-27 12:21:21.947 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:21.954 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:21.954 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.5614ms
+2024-09-27 12:21:21.954 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:22.292 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:22.293 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.3321ms
+2024-09-27 12:21:22.293 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:22.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:22.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.2149ms
+2024-09-27 12:21:22.296 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:22.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:22.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.5317ms
+2024-09-27 12:21:22.753 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:22.754 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:22.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.2609ms
+2024-09-27 12:21:22.754 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:30.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:30.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.5006ms
+2024-09-27 12:21:30.079 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:30.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:30.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.3775ms
+2024-09-27 12:21:30.085 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:30.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:30.812 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.3301ms
+2024-09-27 12:21:30.812 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:30.816 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:30.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.4736ms
+2024-09-27 12:21:30.816 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:48.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:49.000 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:49.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.1456ms
+2024-09-27 12:21:49.000 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:49.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 1.4783ms
+2024-09-27 12:21:49.000 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:49.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:49.424 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.2039ms
+2024-09-27 12:21:49.424 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:49.427 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:49.427 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.2415ms
+2024-09-27 12:21:49.427 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:21:56.189 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:21:56.190 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:21:56.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.8851ms
+2024-09-27 12:21:56.190 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:21:56.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.7052ms
+2024-09-27 12:21:56.190 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:22:11.056 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:22:11.056 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:11.056 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:11.056 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:11.056 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:11.056 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:22:11.077 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:22:11.077 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:11.077 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:11.077 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 20.95ms
+2024-09-27 12:22:11.077 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:11.077 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 21.7392ms
+2024-09-27 12:22:11.078 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:11.078 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 21.3807ms
+2024-09-27 12:22:11.078 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:11.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 22.0564ms
+2024-09-27 12:22:11.479 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:22:11.480 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:11.480 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:22:11.484 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:22:11.485 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:11.485 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 5.1555ms
+2024-09-27 12:22:11.485 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:11.485 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 5.9206ms
+2024-09-27 12:22:11.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:11.493 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:11.493 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:11.495 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:11.496 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:11.496 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2.8559ms
+2024-09-27 12:22:11.496 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:11.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 3.5571ms
+2024-09-27 12:22:14.027 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:22:14.027 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:22:14.028 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.1638ms
+2024-09-27 12:22:14.028 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.5193ms
+2024-09-27 12:22:14.028 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:22:14.028 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:22:14.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:22:14.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.4332ms
+2024-09-27 12:22:14.384 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:22:14.394 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apicategories - null null
+2024-09-27 12:22:14.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apicategories - 404 0 null 0.1585ms
+2024-09-27 12:22:14.394 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apicategories, Response status code: 404
+2024-09-27 12:22:16.977 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:22:16.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.3474ms
+2024-09-27 12:22:16.977 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:22:16.982 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:16.983 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:16.983 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:16.985 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:16.986 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:16.986 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2.9612ms
+2024-09-27 12:22:16.986 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:16.986 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 3.7402ms
+2024-09-27 12:22:17.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:22:17.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.1629ms
+2024-09-27 12:22:17.476 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:22:17.484 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:17.485 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:17.485 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:17.490 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:17.490 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:17.490 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 5.4308ms
+2024-09-27 12:22:17.490 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:17.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 8.5973ms
+2024-09-27 12:22:21.987 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:22:21.988 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.4424ms
+2024-09-27 12:22:21.988 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:22:21.989 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:21.989 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:21.990 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:21.993 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:21.993 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:21.994 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 4.3818ms
+2024-09-27 12:22:21.994 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:21.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 4.8153ms
+2024-09-27 12:22:22.399 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/apibooks - null null
+2024-09-27 12:22:22.400 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/apibooks - 404 0 null 0.4036ms
+2024-09-27 12:22:22.400 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7010/apibooks, Response status code: 404
+2024-09-27 12:22:22.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:22.404 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:22.404 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:22.406 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:22.407 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:22.407 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 2.5924ms
+2024-09-27 12:22:22.407 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:22.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 3.7572ms
+2024-09-27 12:22:28.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:22:28.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:28.291 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:28.291 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:22:28.291 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:28.291 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:28.296 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:22:28.296 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:28.296 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:28.296 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:28.296 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 4.8404ms
+2024-09-27 12:22:28.296 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:28.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 5.5463ms
+2024-09-27 12:22:28.296 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 5.3806ms
+2024-09-27 12:22:28.297 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:28.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 6.2695ms
+2024-09-27 12:22:28.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:22:28.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:22:28.856 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:28.856 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:28.856 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:22:28.856 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:22:28.860 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:22:28.861 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:28.861 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 4.5023ms
+2024-09-27 12:22:28.861 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:22:28.861 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 5.0391ms
+2024-09-27 12:22:28.864 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:22:28.864 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:22:28.864 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 7.4908ms
+2024-09-27 12:22:28.864 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:22:28.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 7.972ms
+2024-09-27 12:26:33.361 +03:00 [INF] Now listening on: https://localhost:7010
+2024-09-27 12:26:33.375 +03:00 [INF] Now listening on: http://localhost:5259
+2024-09-27 12:26:33.376 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 12:26:33.376 +03:00 [INF] Hosting environment: Development
+2024-09-27 12:26:33.376 +03:00 [INF] Content root path: E:\bookstore-server\BookStoreProject
+2024-09-27 12:26:36.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - null null
+2024-09-27 12:26:37.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - 200 null text/html;charset=utf-8 284.6776ms
+2024-09-27 12:26:37.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 12:26:37.060 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.3618ms
+2024-09-27 12:26:37.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - null null
+2024-09-27 12:26:37.100 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.8129ms
+2024-09-27 12:26:37.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - null null
+2024-09-27 12:26:37.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.588ms
+2024-09-27 12:26:44.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/books - null null
+2024-09-27 12:26:44.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7010/api/categories - null null
+2024-09-27 12:26:44.812 +03:00 [INF] CORS policy execution successful.
+2024-09-27 12:26:44.812 +03:00 [INF] CORS policy execution successful.
+2024-09-27 12:26:44.817 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:26:44.817 +03:00 [INF] Executing endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:26:44.835 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.CategoryDTO]]] GetCategories() on controller BookStoreProject.Controllers.CategoriesController (BookStoreProject).
+2024-09-27 12:26:44.835 +03:00 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookStoreProject.DTOs.BookDTO]]] GetBooks() on controller BookStoreProject.Controllers.BooksController (BookStoreProject).
+2024-09-27 12:26:45.609 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-09-27 12:26:46.608 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Books] AS [b]
+2024-09-27 12:26:46.608 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2024-09-27 12:26:46.634 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookStoreProject.DTOs.BookDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:26:46.651 +03:00 [INF] Executed action BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject) in 1813.5958ms
+2024-09-27 12:26:46.652 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.BooksController.GetBooks (BookStoreProject)'
+2024-09-27 12:26:46.657 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[BookStoreProject.Models.Category, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BookStoreProject.DTOs.CategoryDTO, BookStoreProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-27 12:26:46.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/books - 200 null application/json; charset=utf-8 1860.587ms
+2024-09-27 12:26:46.659 +03:00 [INF] Executed action BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject) in 1823.4887ms
+2024-09-27 12:26:46.659 +03:00 [INF] Executed endpoint 'BookStoreProject.Controllers.CategoriesController.GetCategories (BookStoreProject)'
+2024-09-27 12:26:46.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7010/api/categories - 200 null application/json; charset=utf-8 1861.2099ms
